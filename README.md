@@ -1,11 +1,11 @@
 These are reports for labs from my study course. If you are not my teacher, you won't find anything useful in them
 
-1. [Lab1](.forlabs/ThinkDSP/lab1/lab1_report.pdf)
-2. [Lab2](.forlabs/ThinkDSP/lab2/lab2_report.pdf)
-3. [Lab3](.forlabs/ThinkDSP/lab3/lab3_report.pdf)
-4. [Lab4](.forlabs/ThinkDSP/lab4/lab4_report.pdf)
-5. [Lab5](.forlabs/ThinkDSP/lab5/lab5_report.pdf)
-6. [Lab6](.forlabs/ThinkDSP/lab6/lab6_report.pdf)
+1. [Lab1](./forlabs/ThinkDSP/lab1/lab1_report.pdf)
+2. [Lab2](./forlabs/ThinkDSP/lab2/lab2_report.pdf)
+3. [Lab3](./forlabs/ThinkDSP/lab3/lab3_report.pdf)
+4. [Lab4](./forlabs/ThinkDSP/lab4/lab4_report.pdf)
+5. [Lab5](./forlabs/ThinkDSP/lab5/lab5_report.pdf)
+6. [Lab6](./forlabs/ThinkDSP/lab6/lab6_report.pdf)
 ____
 ____
 
