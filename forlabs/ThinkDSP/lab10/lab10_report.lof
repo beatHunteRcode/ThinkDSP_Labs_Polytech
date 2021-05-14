@@ -1,0 +1,15 @@
+\babel@toc {russian}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Импульсный отклик}}{5}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Спектр импульсного отклика}}{6}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Спектр импульсного отклика}}{7}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Визуализация сигнала}}{8}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Избавились от нулевого отступа}}{9}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Избавились от нулевого отступа}}{9}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Cравниваем с \texttt {np.convolve}}}{10}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Используем \texttt {scipy.signal.fftconvolve}}}{11}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Звук волынки}}{12}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Спектр звука}}{13}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Передаточная функция в логарифмическом масштабе}}{14}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Звук флейты}}{15}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Оригинальный звук}}{16}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Трансформированный звук}}{17}{figure.14}%

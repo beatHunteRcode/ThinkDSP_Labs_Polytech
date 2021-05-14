@@ -1,0 +1,20 @@
+\babel@toc {russian}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Треугольный сигнал}}{5}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Сигнал с применением \texttt {diff}}}{6}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Спектр сигнала + \texttt {differentiate}}}{7}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Треугольный сигнал}}{8}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Сигнал с применением \texttt {cumsum}}}{9}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Спектр сигнала + \texttt {integrate}}}{10}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Сравниваем результаты \texttt {cumsum} и \texttt {integrate}}}{11}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Пилообразный сигнал}}{12}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces 1ое применение \texttt {cumsum}}}{13}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces 2ое применение \texttt {cumsum}}}{13}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Двойное интегрирование}}{14}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Итоговый спектр}}{15}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Кубический сигнал}}{16}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces 1ое применение \texttt {diff}}}{17}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces 2ое применение \texttt {diff}}}{17}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Вторая производная}}{18}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Фильтр второй разницы}}{19}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Фильтр второй производной}}{20}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Сравнение фильтров}}{20}{figure.19}%

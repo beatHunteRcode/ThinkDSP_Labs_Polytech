@@ -1,0 +1,176 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{hyphenat}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{upgreek}
+
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+
+\author{Шерепа Никита}
+\title{ThinkDSP. Лабораторная 7. Дискретное преобразование Фурье.}
+\date{\today}
+
+\graphicspath{{res/screenshots}}
+
+\begin{document}%
+	
+	\maketitle
+	
+	\newpage \tableofcontents
+	\newpage \listoffigures
+	\newpage \lstlistoflistings
+	
+	\newpage
+	
+	\definecolor{dkgreen}{rgb}{0,0.6,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+	
+	\lstset{
+		language=Python,                 % выбор ЯП для подсветки 
+		basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+		numbers=left,               % где поставить нумерацию строк (слева\справа)
+		numberstyle=\tiny,           % размер шрифта для номеров строк
+		stepnumber=1,                   % размер шага между двумя номерами строк
+		numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		captionpos=b, 
+		basicstyle={\small\ttfamily},
+		numbers=left,
+		numberstyle=\tiny\color{gray},
+		keywordstyle=\color{blue},
+		commentstyle=\color{mauve},
+		stringstyle=\color{dkgreen},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=3
+	}
+
+	\section{Упражнение 7.2}
+	
+	\begin{enumerate}
+		
+		\item{Задание}
+		
+		Дан массив сигнала \texttt{y}. Разделите его на четные элементы \texttt{e} и нечетные элементы \texttt{o}.
+		
+		Вычислите ДПФ \texttt{e} и \texttt{о}, делая рекурсивные вызовы
+		
+		Вычислите ДПФ(\texttt{y}) для каждого значения \texttt{n}, используя лемму Дэниелсона-Ланцоша.
+		
+		\item{Ход работы}
+		
+		
+		Рассмотрим сигнал и вычислим его БПФ
+		
+		\begin{lstlisting}[caption=БПФ сигнала]
+			ys = [-0.5, 0.1, 0.7, -0.1]
+			hs = np.fft.fft(ys)
+			print(hs)
+			
+			Output
+			[ 0.2+0.j  -1.2-0.2j  0.2+0.j  -1.2+0.2j]
+		\end{lstlisting}
+	
+		Теперь реализуем ДПФ
+		\begin{lstlisting}[caption=ДПФ]
+			def dft(ys):
+			N = len(ys)
+			ts = np.arange(N) / N
+			freqs = np.arange(N)
+			args = np.outer(ts, freqs)
+			M = np.exp(1j * PI2 * args)
+			amps = M.conj().transpose().dot(ys)
+			return amps
+		\end{lstlisting}
+		
+		Применим ДПФ к нашему сигналу
+		\begin{lstlisting}[caption=Применение ДПФ]
+			hs2 = dft(ys)
+			np.sum(np.abs(hs - hs2))
+			
+			Output
+			5.864775846765962e-16
+		\end{lstlisting}
+	
+		Видим, что ДПФ даёт почти такой же результат. Разница в результатах = 5.864775846765962e-16
+		
+		Прежде чем перейти к созданию рекурсивного БПФ, рассмотрим версию, которая использует \texttt{np.fft.fft} для вычисления БПФ половин
+		\begin{lstlisting}[caption=Вычисление БПФ половин]
+			def fft_norec(ys):
+			N = len(ys)
+			He = np.fft.fft(ys[::2])
+			Ho = np.fft.fft(ys[1::2])
+			
+			ns = np.arange(N)
+			W = np.exp(-1j * PI2 * ns / N)
+			
+			return np.tile(He, 2) + W * np.tile(Ho, 2)
+		\end{lstlisting}
+		
+		Применим её к сигналу
+		\begin{lstlisting}[caption=Применение к сигналу]
+			hs3 = fft_norec(ys)
+			np.sum(np.abs(hs - hs3))
+			
+			Output
+			0.0
+		\end{lstlisting}
+		
+		Видим, что результат такой же. Разница = 0.0
+		
+		Теперь заменим \texttt{np.fft.fft} на рекурсивные вызовы
+		\begin{lstlisting}[caption=Добавление рекурсивных вызовов]
+			def fft(ys):
+			N = len(ys)
+			if N == 1:
+			return ys
+			
+			He = fft(ys[::2])
+			Ho = fft(ys[1::2])
+			
+			ns = np.arange(N)
+			W = np.exp(-1j * PI2 * ns / N)
+			
+			return np.tile(He, 2) + W * np.tile(Ho, 2)
+		\end{lstlisting}
+		
+		И применим результат к сигналу
+		\begin{lstlisting}[caption=Применение к сигналу]
+			hs4 = fft(ys)
+			np.sum(np.abs(hs - hs4))
+			
+			Output
+			1.6653345369377348e-16
+		\end{lstlisting}
+		
+		Разница в результатах = 1.6653345369377348e-16
+		
+		Данная реализация имеет сложность O(nlogn) по времени и по памяти.
+		
+		
+	\end{enumerate}
+	
+	
+	\section{Вывод}
+	
+	Во результате выполнения работы получены навыки работы с Дискретным Преобразованием Фурье (ДПФ) и Быстрым Преобразованием Фурье (БПФ).
+	
+	
+\end{document}

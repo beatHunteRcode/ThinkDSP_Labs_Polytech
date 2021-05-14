@@ -1,0 +1,6 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Упражнение 9.2}{5}{section.1}%
+\contentsline {section}{\numberline {2}Упражнение 9.3}{8}{section.2}%
+\contentsline {section}{\numberline {3}Упражнение 9.4}{12}{section.3}%
+\contentsline {section}{\numberline {4}Упражнение 9.5}{16}{section.4}%
+\contentsline {section}{\numberline {5}Вывод}{22}{section.5}%

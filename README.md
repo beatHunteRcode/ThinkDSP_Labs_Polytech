@@ -6,6 +6,11 @@ These are reports for labs from my study course. If you are not my teacher, you 
 4. [Lab4](./forlabs/ThinkDSP/lab4/lab4_report.pdf)
 5. [Lab5](./forlabs/ThinkDSP/lab5/lab5_report.pdf)
 6. [Lab6](./forlabs/ThinkDSP/lab6/lab6_report.pdf)
+7. [Lab7](./forlabs/ThinkDSP/lab7/lab7_report.pdf)
+8. [Lab8](./forlabs/ThinkDSP/lab8/lab8_report.pdf)
+9. [Lab9](./forlabs/ThinkDSP/lab9/lab9_report.pdf)
+10. [Lab10](./forlabs/ThinkDSP/lab10/lab10_report.pdf)
+11. [Lab11](./forlabs/ThinkDSP/lab11/lab11_report.pdf)
 ____
 ____
 

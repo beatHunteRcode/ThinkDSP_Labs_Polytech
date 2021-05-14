@@ -1,0 +1,4 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Упражнение 10.1}{5}{section.1}%
+\contentsline {section}{\numberline {2}Упражнение 10.2}{12}{section.2}%
+\contentsline {section}{\numberline {3}Вывод}{18}{section.3}%
